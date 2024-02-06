@@ -25,10 +25,6 @@ public class WalletService {
         ECKey key = wallet.freshReceiveKey();
         Address address = LegacyAddress.fromKey(networkParameters,key);
         String privateKeyWIF = key.getPrivateKeyEncoded(networkParameters).toBase58();
-
-        System.out.println("Wallet Generated");
-        System.out.println("Address created     = "+address.toString());
-        System.out.println("Private Key created = "+privateKeyWIF);
         return wallet;
     }
 
